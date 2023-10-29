@@ -1,11 +1,25 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Header from "./Header";
+import { checkValidateData } from "../utils/validate";
 
 const Login = () => {
   const [isSignIn, setSignIn] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(null);
+  const email = useRef(null);
+  const password = useRef(null);
 
   const toggleSignInForm = () => {
     setSignIn(!isSignIn);
+  };
+
+  const handleButtonClick = () => {
+    //validate form data
+    const message = checkValidateData(
+      email.current.value,
+      password.current.value
+    );
+    setErrorMessage(message);
+    //if null sign in/sign up
   };
 
   return (
@@ -18,8 +32,13 @@ const Login = () => {
           alt="logo"
         />
       </div>
-      <form className="flex flex-col absolute p-16 bg-black bg-opacity-80 w-3/12 my-36 mx-auto right-0 left-0 rounded-md">
-         <h1 className="text-3xl text-white p-4">{isSignIn? 'Sign In' : 'Sign Up'}</h1>
+      <form
+        onSubmit={(e) => e.preventDefault()}
+        className="flex flex-col absolute p-16 bg-black bg-opacity-80 w-3/12 my-36 mx-auto right-0 left-0 rounded-md"
+      >
+        <h1 className="text-3xl text-white p-4">
+          {isSignIn ? "Sign In" : "Sign Up"}
+        </h1>
 
         {!isSignIn && (
           <input
@@ -29,17 +48,23 @@ const Login = () => {
           />
         )}
         <input
+          ref={email}
           type="text"
-          placeholder="Email or Phone Number"
+          placeholder="Email Id"
           className="p-4 m-4 bg-gray-700 rounded"
         />
         <input
+          ref={password}
           type="password"
           placeholder="Password"
           className="p-4 m-4  bg-gray-700 rounded"
         />
-        <button className="p-4 m-4 bg-red-600 rounded text-white">
-          {isSignIn?'Sign In':'Sign Up'}
+       <p className="px-16 text-red-700 text-xl text-bold">{errorMessage}</p>
+        <button
+          className="p-4 m-4 bg-red-600 rounded text-white"
+          onClick={handleButtonClick}
+        >
+          {isSignIn ? "Sign In" : "Sign Up"}
         </button>
         <div className="flex justify-between">
           <label className="flex items-center space-x-2 px-4 py-2">
@@ -66,7 +91,7 @@ const Login = () => {
               className="text-xl text-white p-4 cursor-pointer"
               onClick={toggleSignInForm}
             >
-             Already registered? Sign In..
+              Already registered? Sign In..
             </h3>
           )}
         </div>
