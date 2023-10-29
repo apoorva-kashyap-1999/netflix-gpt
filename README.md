@@ -2,6 +2,10 @@
 
  - npx create-react-app netflix-gpt
  - configured tailwindcss
+ - Header (logo)
+ - Login Form
+ - Sign Up Form
+ - Formik - can be used for forms, we will validate without it
 
  # Features
   - Login/SignUp page
@@ -16,4 +20,7 @@
        - Movies List (Horizontal scroll)
   - Netflix GPT
      - Search Bar
-     - Movie Suggestion     
+     - Movie Suggestion  
+
+ # Routing
+  - npm i -D react-router-dom       
