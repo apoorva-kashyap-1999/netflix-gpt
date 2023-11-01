@@ -13,6 +13,10 @@
  - To enable auth in firbase disable extensions in browser(CORS etc)
  - Updated node to v20 ad logged in with apoorvaashyap001@gmail.com
  - firebase init command then npm run build then firebase deploy
+ - Create sign up user account in firebase --> https://firebase.google.com/docs/auth/web/password-auth
+ - Push user into Redux Store
+ - Set up a redux store using redux toolkit
+ - onAuthStateChanged  by firebase, whenever user signs in/up / sign out this will be called 
 
  # Features
   - Login/SignUp page
