@@ -8,6 +8,8 @@ import {
   updateProfile
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
 
 const Login = () => {
   const [isSignIn, setSignIn] = useState(true);
@@ -16,6 +18,7 @@ const Login = () => {
   const email = useRef(null);
   const password = useRef(null);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const toggleSignInForm = () => {
     setSignIn(!isSignIn);
@@ -44,6 +47,8 @@ const Login = () => {
           updateProfile(user, {
             displayName: name.current.value , photoURL: "https://example.com/jane-q-user/profile.jpg"
           }).then(() => {
+            const { uid, email, displayName , photoURL } = auth.currentUser;
+            dispatch(addUser({ uid, email, displayName , photoURL}));
             navigate("/browse");
           }).catch((error) => {
             setErrorMessage(error.message);
