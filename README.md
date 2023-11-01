@@ -12,6 +12,7 @@
  - Firebase - as backend (https://console.firebase.google.com/u/0/project/netflixgpt-f37a9/overview)
  - To enable auth in firbase disable extensions in browser(CORS etc)
  - Updated node to v20 ad logged in with apoorvaashyap001@gmail.com
+ - firebase init command then npm run build then firebase deploy
 
  # Features
   - Login/SignUp page
