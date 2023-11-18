@@ -17,6 +17,7 @@
  - Push user into Redux Store
  - Set up a redux store using redux toolkit
  - onAuthStateChanged  by firebase, whenever user signs in/up / sign out this will be called 
+ - BugFix (redirecting user to login page if not signed in else to browse if logged in)
 
  # Features
   - Login/SignUp page
