@@ -3,7 +3,7 @@
  - npx create-react-app netflix-gpt
  - configured tailwindcss
  - Header (logo)
- - Login Form
+ - Login Form 
  - Sign Up Form
  - Routing
  - Formik - can be used for forms, we will validate without it
@@ -19,6 +19,11 @@
  - onAuthStateChanged  by firebase, whenever user signs in/up / sign out this will be called 
  - BugFix (redirecting user to login page if not signed in else to browse if logged in)
  - TMDB - movie api
+ - Updated store with movie data using movieSlice
+ - Fetched data for trailer video
+ - Added youtube embedded video iframe , autoplay, mute
+ 
+
 
  # Features
   - Login/SignUp page
