@@ -16,6 +16,10 @@ export const NOWPLAYINGMOVIE_API = "https://api.themoviedb.org/3/movie/now_playi
 
 export const POPULARMOVIE_API = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1"
 
+export const TOPRATEDMOVIE_API = "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1"
+
+export const UPCOMINGMOVIES_API = "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1"
+
 export const YOUTUBE_EMBED_LINK = "https://www.youtube.com/embed/"
 
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500"

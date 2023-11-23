@@ -6,17 +6,17 @@ const SecondaryContainer = () => {
   const movie = useSelector((store) => store.movies);
   return (
     movie.nowPlayingMovies &&
-    movie.popularMovies && (
+    movie.popularMovies && movie.topRatedMovies && movie.upcomingMovies && (
       // overlap secondary container on top of trailer
       <div className="secondary bg-black">
         <div className="-mt-64 pl-12 relative z-20">
           <MovieList title={"Now Playing"} movies={movie.nowPlayingMovies} />
-          <MovieList title={"Trending"} movies={movie.nowPlayingMovies} />
+          <MovieList title={"TopRated"} movies={movie.topRatedMovies} />
           <MovieList title={"Popular"} movies={movie.popularMovies} />
           <MovieList title={"Recommended"} movies={movie.nowPlayingMovies} />
           <MovieList
             title={"Upcoming Movies"}
-            movies={movie.nowPlayingMovies}
+            movies={movie.upcomingMovies}
           />
         </div>
       </div>
