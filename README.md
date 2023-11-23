@@ -22,6 +22,7 @@
  - Updated store with movie data using movieSlice
  - Fetched data for trailer video
  - Added youtube embedded video iframe , autoplay, mute
+ - Image url for movie - https://developer.themoviedb.org/docs/image-basics
  
 
 
