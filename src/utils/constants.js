@@ -4,6 +4,8 @@ export const userIcon = "https://occ-0-1492-3662.1.nflxso.net/dnm/api/v6/K6hjPJd
 
 export const photoURL = "https://example.com/jane-q-user/profile.jpg"
 
+export const BACKGROUND_IMG = "https://assets.nflxext.com/ffe/siteui/vlv3/dace47b4-a5cb-4368-80fe-c26f3e77d540/f5b52435-458f-498f-9d1d-ccd4f1af9913/IN-en-20231023-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
+
 export const API_OPTIONS = {
     method: 'GET',
     headers: {
@@ -23,4 +25,10 @@ export const UPCOMINGMOVIES_API = "https://api.themoviedb.org/3/movie/upcoming?l
 export const YOUTUBE_EMBED_LINK = "https://www.youtube.com/embed/"
 
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500"
+
+export const SUPPORTED_LANGUAGES = [
+  { identifier:"en", name:"English"},
+  { identifier:"hindi", name:"Hindi"},
+  { identifier:"spanish", name:"Spanish"}
+];
   

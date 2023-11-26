@@ -9,7 +9,7 @@ import {
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { photoURL } from "../utils/constants";
+import { BACKGROUND_IMG, photoURL } from "../utils/constants";
 
 const Login = () => {
   const [isSignIn, setSignIn] = useState(true);
@@ -83,7 +83,7 @@ const Login = () => {
       <div className="absolute flex">
         <img
           className="opacity-90"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/dace47b4-a5cb-4368-80fe-c26f3e77d540/f5b52435-458f-498f-9d1d-ccd4f1af9913/IN-en-20231023-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
+          src={BACKGROUND_IMG}
           alt="bg"
         />
       </div>

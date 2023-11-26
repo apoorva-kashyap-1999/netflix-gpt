@@ -23,6 +23,7 @@
  - Fetched data for trailer video
  - Added youtube embedded video iframe , autoplay, mute
  - Image url for movie - https://developer.themoviedb.org/docs/image-basics
+ - GPT search feature only if user is present
  
 
 
