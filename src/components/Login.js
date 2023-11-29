@@ -80,9 +80,9 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className="absolute flex">
+      <div className="fixed flex">
         <img
-          className="h-screen object-cover md:w-screen opacity-90"
+          className="h-screen object-cover  w-screen opacity-90"
           src={BACKGROUND_IMG}
           alt="bg"
         />
