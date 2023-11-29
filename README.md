@@ -26,6 +26,15 @@
  - GPT search feature only if user is present
  - Multi-lang feature in GPT Search page
  - Integrate -> https://platform.openai.com/ 
+ - Oopen API Key GET
+ - GPT Search API call
+ - Fetched gpt movie suggestions from TMDB 
+ - GPT slice
+ - Reused movie list component
+ - Used useRef
+ - Memoization
+ - .env file
+ - Responsive(Mobile/Desktop)
  
 
 
