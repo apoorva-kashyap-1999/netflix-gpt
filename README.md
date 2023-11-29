@@ -25,6 +25,7 @@
  - Image url for movie - https://developer.themoviedb.org/docs/image-basics
  - GPT search feature only if user is present
  - Multi-lang feature in GPT Search page
+ - Integrate -> https://platform.openai.com/ 
  
 
 

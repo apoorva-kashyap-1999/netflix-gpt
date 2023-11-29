@@ -7,7 +7,7 @@ import {BACKGROUND_IMG} from '../utils/constants'
 const GPTSearch = () => {
   return (
     <div>
-       <div className="absolute flex -z-10">
+       <div className="fixed flex -z-10">
         <img
           className="opacity-90"
           src={BACKGROUND_IMG}
