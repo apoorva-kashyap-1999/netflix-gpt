@@ -61,9 +61,9 @@ const GptSearchBar = () => {
   };
 
   return (
-    <div className="pt-[10%]  flex justify-center">
+    <div className="md:pt-[10%] pt-[45%]  flex justify-center">
       <form
-        className="w-1/2 bg-black grid grid-cols-12 rounded"
+        className="-w-full md:w-1/2 bg-black grid grid-cols-12 rounded"
         onSubmit={(e) => e.preventDefault()}
       >
         <input
