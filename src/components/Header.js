@@ -15,7 +15,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
-
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -42,9 +42,8 @@ const Header = () => {
 
   const handleLanguageChange = (e) => {
     //  console.log(e.target.value);
-    dispatch(changeLanguage(e.target.value))
-     
-  }
+    dispatch(changeLanguage(e.target.value));
+  };
 
   const handleSignOut = () => {
     signOut(auth)
@@ -61,18 +60,23 @@ const Header = () => {
       <img className="w-48" src={logo} alt="logo" />
       {user && (
         <div className="flex p-2">
-          <select className="font-bold text-xl px-8 py-2 m-1 border border-white rounded hover:bg-gray-200" onChange={handleLanguageChange}>
-            {SUPPORTED_LANGUAGES.map((language) =>  (
+          {showGptSearch && (
+            <select
+              className="font-bold text-xl px-8 py-2 m-1 border border-white rounded hover:bg-gray-200"
+              onChange={handleLanguageChange}
+            >
+              {SUPPORTED_LANGUAGES.map((language) => (
                 <option key={language.identifier} value={language.identifier}>
                   {language.name}
                 </option>
               ))}
-          </select>
+            </select>
+          )}
           <button
             onClick={handleGPTSearch}
             className="text-white font-bold px-8 py-2 m-1 border border-white rounded hover:bg-gray-800"
           >
-            GPT Search
+            {showGptSearch?'Home Page':'GPT Search'}
           </button>
           <img
             className="w-14 h-14 p-2 m-2"
